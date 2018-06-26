@@ -5,12 +5,11 @@ object function
 {
   var n=4 ;
   var m=5 ;
-  var x=0 ;
+  
   println("The square is: " + square(n))
   println("The sum of square is: " + SumofSquare(n,m))
   println("Please input your guess: ");
-  x= scala.io.StdIn.readInt();
-  guess(n,x);
+  guess(n);
 }
 
 // 1. Square(n)
@@ -33,16 +32,19 @@ object function
   }
 
 // 3.Guess(n,x)
-    def guess (n: Int, x: Int): Unit =
+    def guess (n: Int): Unit =
     {
-        if((n*n)-x==1 || (n*n)-x==0 || (n*n)-x==(-1))
+        var x=0;
+        println("What is the square of"+ n+"?")
+        x=scala.io.StdIn.readInt();
+        while (!((n*n)-x==1 || (n*n)-x==0 || (n*n)-x==(-1)))
         {
-             println("Good job...");
-        }
-        else 
-        {
+       
             println("You are off by: "+((n*n)-x));
+            println("Please try again...");
+            x=scala.io.StdIn.readInt();
         }
+        println("Congratulation...");
     }
 
 }
