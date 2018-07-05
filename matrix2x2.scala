@@ -5,7 +5,7 @@ object matrix
 
     def main(args: Array[String]) 
     {
-        var m1=Array.ofDim[Int](2,2)
+        var m1=Array.ofDim[Int](2,2)    
         var m2=Array.ofDim[Int](2,2)
         var sum=Array.ofDim[Int](2,2)
         var i=0;
