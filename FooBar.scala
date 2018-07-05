@@ -13,10 +13,9 @@ object Demo
           else if(a %3 == 0)
         println( "Foo" );
             else if (a%5 == 0)
-            println("Bar");
-        
+        println("Bar");
             else 
-            println( a );
+        println( a );
 
       }
    }
